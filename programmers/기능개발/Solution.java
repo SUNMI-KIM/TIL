@@ -19,8 +19,4 @@ public class Solution {
         }
         return queue.stream().mapToInt(Integer::intValue).toArray();
     }
-
-    public static void main(String[] args) {
-
-    }
 }
