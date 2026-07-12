@@ -6,11 +6,10 @@ public class Solution {
         stack.append(' ');
         for (char c : s.toCharArray()) {
             if (c == '(') {
-                if (stack.charAt(stack.length() - 1) == ')') return false;
                 stack.append(c);
             } else if (c == ')') {
-                if (stack.charAt(stack.length() - 1) == c) return false;
                 if (stack.charAt(stack.length() - 1) == '(') stack.deleteCharAt(stack.length() - 1);
+                else return false;
             }
         }
         return stack.length() == 1;
